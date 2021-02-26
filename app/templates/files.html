@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block main %}
+
+    <h2>IMAGES</h2>
+    <div class="Photos" id="Photos">
+        <ul>
+            {% for photof in imagefiles %}
+            <img class="Pics" id="Pics" src="{{ url_for('get_image', filename=photof) }}" />
+            {% endfor %}
+        </ul>
+    </div>
+    
+    
+    
+{% endblock %}
